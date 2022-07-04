@@ -1,1 +1,1 @@
-# 一个基于 Spring 的项目
+# 一个基于 SpringBoot + Spring Cloud Alibaba 的项目
