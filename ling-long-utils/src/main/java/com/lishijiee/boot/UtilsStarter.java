@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LingLongUtilsApplication {
+public class UtilsStarter {
 
     public static void main(String[] args) {
-        SpringApplication.run(LingLongUtilsApplication.class, args);
+        SpringApplication.run(UtilsStarter.class, args);
     }
 
 }
