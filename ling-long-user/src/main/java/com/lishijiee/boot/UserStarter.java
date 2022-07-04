@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LingLongGatewayApplication {
+public class UserStarter {
 
     public static void main(String[] args) {
-        SpringApplication.run(LingLongGatewayApplication.class, args);
+        SpringApplication.run(UserStarter.class, args);
     }
 
 }
