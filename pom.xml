@@ -4,13 +4,72 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.lishijiee</groupId>
+    <groupId>com.lishijiee.boot</groupId>
     <artifactId>ling-long</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <version>${revision}</version>
+
+    <modules>
+        <!-- 公共方法 -->
+        <module>ling-long-utils</module>
+        <!-- bean -->
+        <module>ling-long-bean</module>
+        <!-- 用户服务 -->
+        <module>ling-long-user</module>
+        <!-- 产品服务 -->
+        <module>ling-long-product</module>
+        <!-- 订单服务 -->
+        <module>ling-long-order</module>
+        <!-- 网关服务 -->
+        <module>ling-long-gateway</module>
+    </modules>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <revision>1.0.0-snapshot</revision>
+        <java.version>11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <lombok.version>1.18.24</lombok.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.7.RELEASE</spring-cloud-alibaba.version>
+        <logback.version>1.1.7</logback.version>
+        <slf4j.version>1.7.21</slf4j.version>
+        <common.logging>1.2</common.logging>
+        <fastjson.version>1.2.51</fastjson.version>
+        <mybatis.version>3.4.6</mybatis.version>
+        <mybatis.plus.version>3.4.3</mybatis.plus.version>
+        <mysql.jdbc.version>8.0.19</mysql.jdbc.version>
+        <druid.version>1.1.10</druid.version>
+        <lombok.version>1.18.8</lombok.version>
+        <junit.version>4.12</junit.version>
+        <swagger.version>2.7.0</swagger.version>
     </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.6.RELEASE</version>
+    </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
